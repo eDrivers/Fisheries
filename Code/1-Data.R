@@ -16,12 +16,11 @@ output <- './Data/RawData'
 
 # Data will need to be archived to Zenodo with restricted access and downloaded
 # using an access token.
-# For now, I'm using the data downloaded manually from the website.
+# Eventually it would ideally be part of the SLGO web portal
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #                                   IMPORT DATA
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Dissemination Area Boundary File, 2016 Census. Statistics Canada Catalogue no. 92-169-X.
 # File name
 fileName <- dir(output, pattern = '.zip')
 
@@ -155,7 +154,7 @@ zif[, "Longitude"] <- unlist(lapply(X = zif[, "Longitude"], FUN = dmsTOdd, type 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Spatial object and transform projection
 zif <- st_as_sf(x = zif, coords = c("Longitude", "Latitude"), crs = 4326) %>%
-       st_transform(zif, crs = 32198)
+       st_transform(crs = 32198)
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
