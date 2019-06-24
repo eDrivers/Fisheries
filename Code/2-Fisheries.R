@@ -148,12 +148,19 @@ fisheriesPLB <- fisheriesPLB[fisheriesPLB$FisheriesPLB > 0, ]
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #                                  EXPORT DATA
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Change name for uniformity
+FisheriesDNL <- fisheriesDNL
+FisheriesDNH <- fisheriesDNH
+FisheriesDD <- fisheriesDD
+FisheriesPHB <- fisheriesPHB
+FisheriesPLB <- fisheriesPLB
+
 # Export object as .RData
-save(fisheriesDNL, file = './Data/Driver/FisheriesDNL.RData')
-save(fisheriesDNH, file = './Data/Driver/FisheriesDNH.RData')
-save(fisheriesDD, file = './Data/Driver/FisheriesDD.RData')
-save(fisheriesPHB, file = './Data/Driver/FisheriesPHB.RData')
-save(fisheriesPLB, file = './Data/Driver/FisheriesPLB.RData')
+save(FisheriesDNL, file = './Data/Driver/FisheriesDNL.RData')
+save(FisheriesDNH, file = './Data/Driver/FisheriesDNH.RData')
+save(FisheriesDD, file = './Data/Driver/FisheriesDD.RData')
+save(FisheriesPHB, file = './Data/Driver/FisheriesPHB.RData')
+save(FisheriesPLB, file = './Data/Driver/FisheriesPLB.RData')
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
